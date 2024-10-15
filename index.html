@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Expense Manager</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h2>Daily Expense Manager</h2>
+    </nav>
+
+    <section class="expense-entry">
+        <div class="expense-entry-title">
+            <h3>Enter today's expense:</h3>
+        </div>
+
+        <!--Form Starts-->
+        <div class="expense-entry-form">
+            <form action="#" class="expense-form">
+                <!-- Date -->
+                <div class="form-section" id="expense-date">
+                    <label for="date">Enter today's date:</label>
+                    <input type="date" name="date" id="date">
+                </div>
+                <br> <!-- don't forget to remove later -->
+                <!-- Transportation Section -->
+                <div class="form-section" id="expense-transportation">
+                    <h3>Transportation</h3>
+                    <div class="transport-entry">
+                        <!-- Mode -->
+                        <div class="transport-mode-radio">
+                            <label for="mode">Mode of Transport:</label>
+                            <input type="radio" name="transport-mode" id="metro" value="metro">
+                            <label for="metro">Metro</label>
+
+                            <input type="radio" name="transport-mode" id="bus" value="bus">
+                            <label for="bus">Bus</label>
+
+                            <input type="radio" name="transport-mode" id="train" value="train">
+                            <label for="train">Train</label>
+                        </div>
+
+                        <!-- Starting Points -->
+                        <label for="starting">Starting Point:</label>
+                        <select name="starting" id="starting">
+                            <option value="kaloor">Kaloor</option>
+                            <option value="jln stadium">JLN Stadium</option>
+                            <option value="edappally">Edappally</option>
+                            <option value="other-starting-point">Other (Enter Manually)</option>
+                        </select>
+                        <!-- Input for custom starting point, hidden initially -->
+                        <input type="text" name="other-starting-point" class="other-starting-point" placeholder="Enter starting point" style="display: none;">
+                        
+                        <!-- Destination Points -->
+                        <label for="destination">Destination Point:</label>
+                        <select name="destination" id="destination">
+                            <option value="kaloor">Kaloor</option>
+                            <option value="jln stadium">JLN Stadium</option>
+                            <option value="edappally">Edappally</option>
+                            <option value="other-destination-point">Other (Enter Manually)</option>
+                        </select>
+                        <!-- Input for custom destination point, hidden initially -->
+                        <input type="text" name="other-destination-point" class="other-destination-point" placeholder="Enter destination point" style="display: none;">
+                        
+                        <!-- Ticket Price -->
+                        <label for="transport-price">Fare:</label>
+                        <input type="number" name="transport-price" id="transport-price" class="ticket-price" placeholder="Enter ticket price">
+                    </div>
+                    <!-- Button to add new transport entry -->
+                    <button type="button" id="add-transport-btn">+ Add More</button>
+                </div>
+                <br> <!-- don't forget to remove later -->
+                <!-- Food Section -->
+                <div class="form-section" id="expense-food">
+                    <h3>Food</h3>
+                    <div class="food-entry">
+                        <label for="food-item">Food Item:</label>
+                        <select name="food" id="food-item">
+                            <option value="tea">Tea</option>
+                            <option value="coffee">Coffee</option>
+                            <option value="other-food">Other (Enter Manually)</option>
+                        </select>
+                        <!-- Input for custom destination point, hidden initially -->
+                        <input type="text" name="other-food" id="other-food" placeholder="Enter custom food item" style="display:none;">
+
+                        <!-- Food Price -->
+                        <label for="food-price">Price:</label>
+                        <input type="number" name="food-price" id="food-price" class="food-price" placeholder="Enter food price">
+                    </div>
+                    <!-- Button to add new food entry -->
+                    <button type="button" id="add-food-btn">+ Add More</button>
+                </div>
+                <br> <!-- don't forget to remove later -->
+                <!-- Other Expenses Section -->
+                <div class="form-section" id="expense-other">
+                    <h3>Other Expenses</h3>
+                    <div class="other-entry">
+                        <label for="other-expense">Expense:</label>
+                        <input type="text" name="other-expense" id="other-expense" class="other-expense" placeholder="Enter other expense">
+
+                        <label for="other-price">Price:</label>
+                        <input type="number" name="other-price" id="other-price" class="other-price" placeholder="Enter price">
+                    </div>
+                    <!-- Button to add new other expense entry -->
+                    <button type="button" id="add-other-btn">+ Add More</button>
+                </div>
+                <br> <!-- don't forget to remove later -->
+                <!-- Submit Button -->
+                <center><button type="submit">Add Today's Expense</button></center>
+            </form>
+        </div>
+    </section>
+    <br> <!-- don't forget to remove later -->
+    <section class="recent-expense-entry">
+        <div id="recent-entries">
+            <h3>Recent Entries</h3>
+            <!-- Recent entries will be displayed here dynamically -->
+        </div>
+    </section>
+
+
+</body>
+</html>
